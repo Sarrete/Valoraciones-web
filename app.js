@@ -14,7 +14,7 @@ document.getElementById("submit-review").addEventListener("submit", function (e)
   }
 
   // Enviar la solicitud al servidor
-  fetch('/netlify/functions/save-review.js', {
+  fetch('/netlify/functions/save-review', {
     method: 'POST',
     body: formData,
   })
