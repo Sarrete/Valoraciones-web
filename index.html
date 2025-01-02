@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valoraciones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Deja tu valoración</h1>
+  </header>
+
+  <!-- Formulario de valoraciones -->
+  <section id="review-form">
+    <h2>Tu Opinión</h2>
+    <form id="submit-review">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="rating">Calificación:</label>
+      <select id="rating" name="rating" required>
+        <option value="5">★★★★★</option>
+        <option value="4">★★★★☆</option>
+        <option value="3">★★★☆☆</option>
+        <option value="2">★★☆☆☆</option>
+        <option value="1">★☆☆☆☆</option>
+      </select>
+
+      <label for="comment">Comentario:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+
+      <label for="photo">Subir Foto (opcional):</label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Valoraciones pendientes de aprobación -->
+  <section id="pending-reviews">
+    <h2>Valoraciones Pendientes</h2>
+    <div id="reviews-list"></div>
+  </section>
+
+  <script src="./app.js"></script>
+</body>
+</html>
